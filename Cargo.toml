@@ -1,0 +1,17 @@
+[package]
+name = "bluepill-blinky"
+version = "0.1.0"
+authors = ["Mendelt Siebenga <msiebenga@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+cortex-m = "0.6"
+cortex-m-rt = "0.6"
+cortex-m-semihosting = "0.3"
+panic-semihosting = "0.5"
+
+[dependencies.hal]
+package = "stm32f1xx-hal"
+version = "0.2"
+features = ["rt", "stm32f103"]
+
