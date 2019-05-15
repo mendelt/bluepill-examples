@@ -4,9 +4,9 @@
 #![no_std]
 
 use cortex_m_rt::entry;
-use stm32f1xx_hal::i2c::{BlockingI2c, Mode};
-use stm32f1xx_hal::pac;
-use stm32f1xx_hal::prelude::*;
+use hal::i2c::{BlockingI2c, Mode};
+use hal::pac;
+use hal::prelude::*;
 
 use mcp4725::*;
 #[allow(unused_imports)]
