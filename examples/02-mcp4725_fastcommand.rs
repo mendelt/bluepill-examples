@@ -45,15 +45,12 @@ fn main() -> ! {
     // Configure the MCP4725 DAC
     let mut dac = MCP4725::create(i2c);
 
-    // Create the dac command and set it to the right address
-    let mut dac_cmd = Command::default().address(0b010);
-
     // Slowly decrease the output of the DAC to its minimum value, then start over
-    let mut dac_cmd = FastCommand::default().set_address(0b010);
+    let mut dac_cmd = FastCommand::default().address(0b010);
     let mut value: u16 = 0x0fff;
 
     loop {
-        dac_cmd = dac_cmd.set_data(value);
+        dac_cmd = dac_cmd.data(value);
         dac.send_fast(&dac_cmd);
         value -= 1;
         value &= 0x0fff;

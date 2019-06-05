@@ -32,7 +32,7 @@ dependencies = [
  "cortex-m 0.6.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "cortex-m-rt 0.6.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "cortex-m-semihosting 0.3.3 (registry+https://github.com/rust-lang/crates.io-index)",
- "mcp4725 0.1.0 (git+https://github.com/mendelt/mcp4725)",
+ "mcp4725 0.1.1 (git+https://github.com/mendelt/mcp4725)",
  "nb 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "panic-semihosting 0.5.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "stm32f1xx-hal 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -100,8 +100,8 @@ dependencies = [
 
 [[package]]
 name = "mcp4725"
-version = "0.1.0"
-source = "git+https://github.com/mendelt/mcp4725#e098f45c25c1245cd7a55213e26ffd3d0db06d77"
+version = "0.1.1"
+source = "git+https://github.com/mendelt/mcp4725#0277bd3cbe0868977c2cf81c0565af300e59c3ea"
 dependencies = [
  "embedded-hal 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -262,7 +262,7 @@ dependencies = [
 "checksum cortex-m-semihosting 0.3.3 (registry+https://github.com/rust-lang/crates.io-index)" = "165f3f86f4d1031351a6c9dc8d5a3f8fae2050f9dd6ef925e3d675c232cc0e46"
 "checksum embedded-hal 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)" = "ee4908a155094da7723c2d60d617b820061e3b4efcc3d9e293d206a5a76c170b"
 "checksum generic-array 0.12.0 (registry+https://github.com/rust-lang/crates.io-index)" = "3c0f28c2f5bfb5960175af447a2da7c18900693738343dc896ffbcabd9839592"
-"checksum mcp4725 0.1.0 (git+https://github.com/mendelt/mcp4725)" = "<none>"
+"checksum mcp4725 0.1.1 (git+https://github.com/mendelt/mcp4725)" = "<none>"
 "checksum nb 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)" = "b1411551beb3c11dedfb0a90a0fa256b47d28b9ec2cdff34c25a2fa59e45dbdc"
 "checksum panic-semihosting 0.5.2 (registry+https://github.com/rust-lang/crates.io-index)" = "97cfb37c1d3b5f0cc18bf14485018cccd13bdd24f7b5bfd456c1d8760afef824"
 "checksum proc-macro2 0.4.30 (registry+https://github.com/rust-lang/crates.io-index)" = "cf3d2011ab5c909338f7887f4fc896d35932e29146c12c8d01da6b22a80ba759"
