@@ -2,7 +2,6 @@
 #![no_std]
 
 use cortex_m_rt::{entry};
-use cortex_m_semihosting::hprintln;
 use hal::prelude::*;
 use hal::stm32;
 use hal::timer::Timer;
