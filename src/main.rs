@@ -30,5 +30,5 @@ fn main() -> ! {
         blink.set_high();
         block!(timer.wait()).unwrap();
         blink.set_low();
-}}
-
+    }
+}
