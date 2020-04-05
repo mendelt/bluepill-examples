@@ -1,14 +1,16 @@
 #![no_main]
 #![no_std]
 
+#[allow(unused_imports)]
+use panic_semihosting;
+
 use cortex_m_rt::{entry};
 use hal::prelude::*;
 use hal::stm32;
 use hal::timer::Timer;
 use nb::block;
 
-#[allow(unused_imports)]
-use panic_semihosting;
+use embedded_hal::digital::v2::OutputPin;
 
 #[entry]
 fn main() -> ! {
@@ -20,14 +22,14 @@ fn main() -> ! {
     let clocks = rcc.cfgr.freeze(&mut flash.acr);
 
     let mut gpioc = device.GPIOC.split(&mut rcc.apb2);
-    let mut blink = gpioc.pc13.into_push_pull_output(&mut gpioc.crh);
-    let mut timer = Timer::syst(peripherals.SYST, 1.hz(), clocks);
+    let mut led = gpioc.pc13.into_push_pull_output(&mut gpioc.crh);
+    let mut timer = Timer::syst(peripherals.SYST, &clocks).start_count_down(1.hz());
 
     // Wait for the timer to trigger an update and change the state of the LED
     loop {
         block!(timer.wait()).unwrap();
-        blink.set_high();
+        led.set_high().unwrap();
         block!(timer.wait()).unwrap();
-        blink.set_low();
+        led.set_low().unwrap();
     }
 }
