@@ -34,7 +34,9 @@ fn main() -> ! {
         dp.I2C1,
         (scl, sda),
         &mut afio.mapr,
-        Mode::Standard { frequency: 100000.hz() },
+        Mode::Standard {
+            frequency: 100000.hz(),
+        },
         clocks,
         &mut rcc.apb1,
         1000,

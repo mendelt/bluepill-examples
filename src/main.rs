@@ -4,7 +4,7 @@
 #[allow(unused_imports)]
 use panic_semihosting;
 
-use cortex_m_rt::{entry};
+use cortex_m_rt::entry;
 use hal::prelude::*;
 use hal::stm32;
 use hal::timer::Timer;

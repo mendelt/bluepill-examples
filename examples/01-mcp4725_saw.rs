@@ -6,8 +6,8 @@
 use cortex_m_rt::entry;
 use hal::i2c::{BlockingI2c, Mode};
 use hal::pac;
-use hal::time::U32Ext;
 use hal::prelude::*;
+use hal::time::U32Ext;
 
 use mcp4725::*;
 #[allow(unused_imports)]
@@ -34,7 +34,9 @@ fn main() -> ! {
         dp.I2C1,
         (scl, sda),
         &mut afio.mapr,
-        Mode::Standard { frequency: 100000.hz() },
+        Mode::Standard {
+            frequency: 100000.hz(),
+        },
         clocks,
         &mut rcc.apb1,
         1000,
