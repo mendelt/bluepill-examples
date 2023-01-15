@@ -28,8 +28,8 @@ fn main() -> ! {
     // Wait for the timer to trigger an update and change the state of the LED
     loop {
         block!(timer.wait()).unwrap();
-        led.set_high().unwrap();
+        led.set_high();
         block!(timer.wait()).unwrap();
-        led.set_low().unwrap();
+        led.set_low();
     }
 }
